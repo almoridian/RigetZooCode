@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Riget Zoo Adventures</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1><a href="../index.html">🦁 Riget Zoo Adventures</a></h1>
+            </div>
+            <div class="navbar-auth" id="navAuth"></div>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <section class="account-section">
+            <div class="container">
+                <h2>My Account</h2>
+
+                <!-- Tabs Navigation -->
+                <div class="tab-navigation" role="tablist">
+                    <button role="tab" aria-selected="true" aria-controls="profilePanel" class="tab-btn active" id="profileTab">
+                        Profile
+                    </button>
+                    <button role="tab" aria-selected="false" aria-controls="bookingsPanel" class="tab-btn" id="bookingsTab">
+                        Bookings
+                    </button>
+                    <button role="tab" aria-selected="false" aria-controls="rewardsPanel" class="tab-btn" id="rewardsTab">
+                        ⭐ Rewards
+                    </button>
+                </div>
+
+                <!-- Profile Tab -->
+                <div role="tabpanel" id="profilePanel" class="tab-panel active">
+                    <h3>Profile Information</h3>
+                    
+                    <div class="profile-info" id="profileInfo">
+                        <p>Loading profile...</p>
+                    </div>
+
+                    <form id="updateProfileForm" class="hidden">
+                        <fieldset>
+                            <legend>Update Profile</legend>
+
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateOfBirth">Date of Birth</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="button" id="cancelEditBtn" class="btn btn-secondary">Cancel</button>
+                        </fieldset>
+                    </form>
+
+                    <button id="editProfileBtn" class="btn btn-secondary">Edit Profile</button>
+
+                    <!-- Accessibility Needs -->
+                    <h3 style="margin-top: 30px;">Accessibility Needs</h3>
+                    <form id="accessibilityForm">
+                        <fieldset>
+                            <legend>Update accessibility requirements</legend>
+                            
+                            <div class="checkboxes">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="wheelchairAccess" value="wheelchair_access">
+                                    <label for="wheelchairAccess">Wheelchair Access</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="serviceAnimal" value="service_animal">
+                                    <label for="serviceAnimal">Service Animal</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="parking" value="parking">
+                                    <label for="parking">Accessible Parking</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="mobility" value="mobility_aid">
+                                    <label for="mobility">Mobility Aid</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Save Accessibility Needs</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <!-- Bookings Tab -->
+                <div role="tabpanel" id="bookingsPanel" class="tab-panel hidden">
+                    <h3>My Bookings</h3>
+                    
+                    <!-- Zoo Bookings -->
+                    <div class="bookings-section">
+                        <h4>Zoo Tickets</h4>
+                        <div id="zooBookingsList" class="bookings-list">
+                            <p>No zoo bookings yet.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Bookings -->
+                    <div class="bookings-section">
+                        <h4>Hotel Reservations</h4>
+                        <div id="hotelBookingsList" class="bookings-list">
+                            <p>No hotel bookings yet.</p>
+                        </div>
+                    </div>
+
+                    <!-- Educational Bookings -->
+                    <div class="bookings-section">
+                        <h4>Educational Visits</h4>
+                        <div id="eduBookingsList" class="bookings-list">
+                            <p>No educational bookings yet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rewards Tab -->
+                <div role="tabpanel" id="rewardsPanel" class="tab-panel hidden">
+                    <h3>Loyalty Rewards</h3>
+
+                    <div id="rewardsInfo" class="rewards-card">
+                        <p>Loading rewards...</p>
+                    </div>
+
+                    <!-- Reward Transactions -->
+                    <h4>Recent Transactions</h4>
+                    <div id="transactionsList" class="transactions-list">
+                        <p>No transactions yet.</p>
+                    </div>
+
+                    <!-- Redeem Points -->
+                    <div class="redeem-section">
+                        <h4>Redeem Points</h4>
+                        <form id="redeemForm">
+                            <fieldset>
+                                <legend>Redeem your loyalty points</legend>
+
+                                <div class="form-group">
+                                    <label for="redeemPoints">Points to Redeem</label>
+                                    <input type="number" id="redeemPoints" name="redeemPoints" min="1" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="redeemDescription">Description</label>
+                                    <input type="text" id="redeemDescription" name="redeemDescription" required>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Redeem Points</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Messages -->
+        <div class="success-message hidden" id="successMessage" role="status"></div>
+        <div class="error-message hidden" id="errorMessage" role="alert"></div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <p>&copy; 2026 Riget Zoo Adventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/account.js"></script>
+</body>
+</html>

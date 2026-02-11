@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Riget Zoo Adventures</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1><a href="../index.html">🦁 Riget Zoo Adventures</a></h1>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <section class="auth-section">
+            <div class="auth-container">
+                <h2>Login to Your Account</h2>
+                
+                <!-- Error Message -->
+                <div id="errorMessage" class="alert alert-error hidden" role="alert"></div>
+                
+                <!-- Success Message -->
+                <div id="successMessage" class="alert alert-success hidden" role="alert"></div>
+                
+                <form id="loginForm" method="post" aria-label="Login form">
+                    <fieldset>
+                        <legend>Enter your credentials</legend>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                aria-required="true"
+                                placeholder="your@email.com"
+                            >
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                required 
+                                aria-required="true"
+                                placeholder="Enter your password"
+                            >
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary" aria-label="Submit login form">
+                            Login
+                        </button>
+                    </fieldset>
+                </form>
+
+                <!-- Footer Links -->
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.html">Create one here</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Riget Zoo Adventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

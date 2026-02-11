@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riget Zoo Adventures - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c5f2d">
+    <meta name="description" content="Book zoo tickets, hotels, and educational visits at Riget Zoo Adventures">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>🦁 Riget Zoo Adventures</h1>
+            </div>
+            <ul class="navbar-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/booking.html">Zoo Tickets</a></li>
+                <li><a href="pages/hotel.html">Hotel</a></li>
+                <li><a href="pages/login.html" id="loginLink">Login</a></li>
+                <li><a href="pages/register.html" id="registerLink">Register</a></li>
+                <li><a href="pages/account.html" class="hidden" id="accountLink">My Account</a></li>
+                <li><button id="logoutBtn" class="btn-logout hidden">Logout</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <section class="hero">
+            <div class="container hero-content">
+                <h2>Welcome to Riget Zoo Adventures</h2>
+                <p>Experience the wonders of nature with family and friends</p>
+                <div class="cta-buttons">
+                    <a href="pages/booking.html" class="btn btn-primary">Book Zoo Tickets</a>
+                    <a href="pages/hotel.html" class="btn btn-secondary">Reserve Hotel</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <!-- Zoo Tickets -->
+                    <article class="service-card">
+                        <h3>🎫 Zoo Tickets</h3>
+                        <p>Choose from our flexible ticket options including adult, child, family, and senior passes.</p>
+                        <ul class="features">
+                            <li>Flexible booking dates</li>
+                            <li>Group discounts available</li>
+                            <li>Fast and secure checkout</li>
+                        </ul>
+                        <a href="pages/booking.html" class="btn btn-outline">Book Now</a>
+                    </article>
+
+                    <!-- Hotel -->
+                    <article class="service-card">
+                        <h3>🏨 Hotel Stays</h3>
+                        <p>Stay in comfort with our on-site hotel featuring single, double, and suite options.</p>
+                        <ul class="features">
+                            <li>Various room types</li>
+                            <li>Loyalty discounts</li>
+                            <li>Special requests welcome</li>
+                        </ul>
+                        <a href="pages/hotel.html" class="btn btn-outline">Check Availability</a>
+                    </article>
+
+                    <!-- Rewards -->
+                    <article class="service-card">
+                        <h3>⭐ Loyalty Rewards</h3>
+                        <p>Earn points on every booking and redeem them for exclusive discounts and perks.</p>
+                        <ul class="features">
+                            <li>1 point per DKK spent</li>
+                            <li>Bronze to Platinum tiers</li>
+                            <li>VIP benefits included</li>
+                        </ul>
+                        <a href="pages/account.html" class="btn btn-outline">View Rewards</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessibility Section -->
+        <section class="accessibility-info">
+            <div class="container">
+                <h2>Accessibility</h2>
+                <p>We are committed to providing an accessible experience for all visitors. Our website is designed following WCAG 2.1 guidelines.</p>
+                <details>
+                    <summary>Accessibility Features</summary>
+                    <ul>
+                        <li>Keyboard navigation support</li>
+                        <li>Screen reader compatible</li>
+                        <li>High contrast mode available</li>
+                        <li>Wheelchair accessible facilities</li>
+                        <li>Service animal policy</li>
+                        <li>Accessible parking</li>
+                    </ul>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <p>&copy; 2026 Riget Zoo Adventures. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#accessibility">Accessibility Statement</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

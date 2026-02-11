@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hotel - Riget Zoo Adventures</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1><a href="../index.html">🦁 Riget Zoo Adventures</a></h1>
+            </div>
+            <div class="navbar-auth" id="navAuth"></div>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <section class="booking-section">
+            <div class="container">
+                <h2>Reserve Hotel Room</h2>
+
+                <div class="booking-container">
+                    <!-- Search Form -->
+                    <form id="hotelSearchForm" aria-label="Hotel room search form">
+                        <fieldset>
+                            <legend>Search available rooms</legend>
+
+                            <!-- Check-in Date -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkInDate">Check-in Date</label>
+                                    <input 
+                                        type="date" 
+                                        id="checkInDate" 
+                                        name="checkInDate" 
+                                        required 
+                                        aria-required="true"
+                                    >
+                                    <span class="error-message" id="checkInError" role="alert"></span>
+                                </div>
+
+                                <!-- Check-out Date -->
+                                <div class="form-group">
+                                    <label for="checkOutDate">Check-out Date</label>
+                                    <input 
+                                        type="date" 
+                                        id="checkOutDate" 
+                                        name="checkOutDate" 
+                                        required 
+                                        aria-required="true"
+                                    >
+                                    <span class="error-message" id="checkOutError" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <!-- Occupancy -->
+                            <div class="form-group">
+                                <label for="occupancy">Number of Guests</label>
+                                <input 
+                                    type="number" 
+                                    id="occupancy" 
+                                    name="occupancy" 
+                                    min="1" 
+                                    max="10"
+                                    value="1"
+                                    required 
+                                    aria-required="true"
+                                >
+                                <span class="error-message" id="occupancyError" role="alert"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Search Available Rooms
+                            </button>
+                        </fieldset>
+                    </form>
+
+                    <!-- Available Rooms -->
+                    <div id="availableRooms" class="rooms-grid hidden">
+                        <h3>Available Rooms</h3>
+                        <div id="roomsList"></div>
+                    </div>
+
+                    <!-- Special Requests -->
+                    <div id="bookingDetails" class="hidden">
+                        <fieldset>
+                            <legend>Special Requests</legend>
+                            <div class="form-group">
+                                <label for="specialRequests">Any special requests? (Optional)</label>
+                                <textarea 
+                                    id="specialRequests" 
+                                    name="specialRequests"
+                                    rows="4"
+                                    placeholder="e.g., late check-in, high floor, quiet room..."
+                                ></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Messages -->
+        <div class="success-message hidden" id="successMessage" role="status"></div>
+        <div class="error-message hidden" id="errorMessage" role="alert"></div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <p>&copy; 2026 Riget Zoo Adventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/hotel.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Account - Riget Zoo Adventures</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1><a href="../index.html">🦁 Riget Zoo Adventures</a></h1>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <section class="auth-section">
+            <div class="auth-container">
+                <h2>Create Account</h2>
+                
+                <form id="registerForm" method="post" aria-label="Registration form">
+                    <fieldset>
+                        <legend>Enter your details</legend>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                aria-required="true"
+                                placeholder="your@email.com"
+                            >
+                            <span class="error-message" id="emailError" role="alert"></span>
+                        </div>
+
+                        <!-- First Name -->
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                required 
+                                aria-required="true"
+                                placeholder="John"
+                            >
+                            <span class="error-message" id="firstNameError" role="alert"></span>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                required 
+                                aria-required="true"
+                                placeholder="Doe"
+                            >
+                            <span class="error-message" id="lastNameError" role="alert"></span>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                required 
+                                aria-required="true"
+                                placeholder="8+ characters, 1 uppercase, 1 number, 1 special char (!@#$%^&*)"
+                            >
+                            <span class="error-message" id="passwordError" role="alert"></span>
+                            <small>Minimum 8 characters with uppercase, number, and special character</small>
+                        </div>
+
+                        <!-- Terms Checkbox -->
+                        <div class="form-group checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="terms" 
+                                name="terms" 
+                                required 
+                                aria-required="true"
+                            >
+                            <label for="terms">
+                                I agree to the <a href="#terms" target="_blank">Terms of Service</a> 
+                                and <a href="#privacy" target="_blank">Privacy Policy</a>
+                            </label>
+                            <span class="error-message" id="termsError" role="alert"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Create Account
+                        </button>
+                    </fieldset>
+                </form>
+
+                <!-- Success Message -->
+                <div class="success-message hidden" id="successMessage" role="status"></div>
+
+                <!-- Error Message -->
+                <div class="error-message hidden" id="errorMessage" role="alert"></div>
+
+                <!-- Login Link -->
+                <p class="auth-link">
+                    Already have an account? <a href="login.html">Login here</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <p>&copy; 2026 Riget Zoo Adventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>
