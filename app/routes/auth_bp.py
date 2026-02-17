@@ -70,8 +70,8 @@ def login():
         if not user.is_active:
             return jsonify({'error': 'Account is inactive'}), 403
         
-        # Generate JWT token
-        access_token = create_access_token(identity=user.user_id)
+        # Generate JWT token (identity must be a string)
+        access_token = create_access_token(identity=str(user.user_id))
         
         return jsonify({
             'message': 'Login successful',

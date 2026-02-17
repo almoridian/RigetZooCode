@@ -13,7 +13,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.getenv(
         'DATABASE_URL',
-        'mysql+pymysql://root:@localhost:3306/riget_zoo_adventures'
+        'sqlite:///riget_zoo_adventures.db'
     )
 
 class TestingConfig(Config):

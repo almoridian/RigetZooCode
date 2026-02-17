@@ -1,6 +1,7 @@
 from app import db
 from datetime import datetime
 import bcrypt
+from sqlalchemy import Numeric
 
 class User(db.Model):
     """User model"""
@@ -51,7 +52,7 @@ class Booking(db.Model):
     ticket_type = db.Column(db.String(50), nullable=False)
     booking_date = db.Column(db.Date, nullable=False)
     num_tickets = db.Column(db.Integer, nullable=False)
-    total_price = db.Column(db.Decimal(10, 2), nullable=False)
+    total_price = db.Column(db.Numeric(10, 2), nullable=False)
     status = db.Column(db.String(20), default='confirmed')
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     
@@ -76,7 +77,7 @@ class HotelBooking(db.Model):
     check_in = db.Column(db.Date, nullable=False)
     check_out = db.Column(db.Date, nullable=False)
     num_rooms = db.Column(db.Integer, nullable=False)
-    total_price = db.Column(db.Decimal(10, 2), nullable=False)
+    total_price = db.Column(db.Numeric(10, 2), nullable=False)
     status = db.Column(db.String(20), default='confirmed')
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     

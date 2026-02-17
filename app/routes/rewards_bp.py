@@ -10,7 +10,7 @@ bp = Blueprint('rewards', __name__, url_prefix='/api/rewards')
 def get_rewards():
     """Get user's loyalty rewards"""
     try:
-        user_id = get_jwt_identity()
+        user_id = int(get_jwt_identity())
         rewards = Rewards.query.filter_by(user_id=user_id).first()
         
         if not rewards:
@@ -29,7 +29,7 @@ def get_rewards():
 def add_points():
     """Add points to user's rewards"""
     try:
-        user_id = get_jwt_identity()
+        user_id = int(get_jwt_identity())
         data = request.get_json()
         
         if not data or not data.get('points'):

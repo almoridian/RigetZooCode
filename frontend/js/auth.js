@@ -117,7 +117,16 @@ const AUTH = {
     const token = this.getToken();
     if (token) {
       headers['Authorization'] = `Bearer ${token}`;
+    } else {
+      console.warn('No token found for request to ' + endpoint);
     }
+    
+    console.log('API Request Debug:', {
+      endpoint: endpoint,
+      url: url,
+      hasToken: !!token,
+      headers: Object.keys(headers)
+    });
 
     try {
       const response = await fetch(url, {

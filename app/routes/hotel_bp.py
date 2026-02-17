@@ -10,7 +10,7 @@ bp = Blueprint('hotel', __name__, url_prefix='/api/hotel')
 def book_hotel():
     """Book a hotel room"""
     try:
-        user_id = get_jwt_identity()
+        user_id = int(get_jwt_identity())
         data = request.get_json()
         
         if not data:
@@ -49,7 +49,7 @@ def book_hotel():
 def get_hotel_bookings():
     """Get user's hotel bookings"""
     try:
-        user_id = get_jwt_identity()
+        user_id = int(get_jwt_identity())
         bookings = HotelBooking.query.filter_by(user_id=user_id).all()
         
         return jsonify({
